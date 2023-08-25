@@ -7,8 +7,6 @@ import SectionCards from "@/component/card/section-cards";
 
 import { getPopularVideos, getVideos } from "@/lib/videos";
 
-import { magic } from "../lib/magic-client";
-
 export async function getServerSideProps(context) {
   const disneyVideos = await getVideos("disney trailer");
   const productivityVideos = await getVideos("Productivity");
@@ -37,7 +35,8 @@ export default function Home({
 
       <div className={styles.main}>
         <NavBar />
-        <Banner
+        <Banner          
+          videoId="4zH5iYM4wJo"
           title="Clifford the red dog"
           subTitle="a very cute dog"
           imgUrl="/static/clifford.webp"
